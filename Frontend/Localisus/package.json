@@ -13,7 +13,7 @@
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.0.0",
     "leaflet": "^1.9.4",
-    "lucide-react": "^1.16.0",
+    "lucide-react": "^1.48.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-leaflet": "^5.0.0",

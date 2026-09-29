@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Lembretes.css"
-import { ComponenteCard } from "../components/Cards";
+import { ComponenteCard } from "../components/Cards/Cards";
 import { NavLink } from "react-router-dom";
 
 export const Lembretes = () => {

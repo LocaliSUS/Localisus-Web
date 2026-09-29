@@ -1,7 +1,7 @@
 import "./Home.css"
-import { Cards } from "../components/Cards"
+import { Cards } from "../components/Cards/Cards"
 import { HeroImagem } from "../components/HeroImagem"
-import { Navbar } from "../components/Navbar"
+import { Navbar } from "../components/Navbar/Navbar"
 
 export const Home = () => {
     return (

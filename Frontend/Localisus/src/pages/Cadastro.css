@@ -1,0 +1,90 @@
+.tela-cadastro{
+    display: flex;
+}
+
+
+.card-cadastro{
+    z-index: 3;
+    border-radius: 30px;
+    height: 850px;
+    margin-left:2.5%;
+    width:85vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0.5px 0.5px 1.5px 0.8px rgba(0, 0, 0, 0.8);
+}
+
+.elementos-cadastro-esquerda{
+    margin-left: 0.2%;
+    background-color: #effbff;
+    border-radius: 1%;
+    height: 98vh;
+    width: 100vh;
+}
+
+.elementos-cadastro-esquerda h2, .elementos-cadastro-esquerda h3{
+    margin-left: 2%;
+}
+
+.elementos-cadastro-esquerda h2{
+    font-size: 50px;
+    margin-top: 7.5%;
+}
+
+.elementos-cadastro-esquerda h3{
+    color: #777777;
+    width: 48%;
+    margin-top: 2.5%;
+}
+
+.elementos-cadastro-esquerda img{
+    position: absolute;
+    width: 80%;
+}
+
+#cadastro-formulario{
+    margin-top: 7.5%;
+    height: 100px;
+    width: 650px;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 2%;
+    height: 45px;
+    box-shadow: 1px 0.35px 5px 0.15px rgba(113, 113, 113, 0.8);
+    border-style: none;
+    border-radius: 10px;
+
+}
+
+.botoes-cancelar-continuar{
+    display: flex;
+    margin-top: 2.5%;
+    width: 100%;
+    height: 45px;
+    border-style: none;
+    justify-content: center;
+}
+
+#botao-cancelar{
+    cursor: pointer;
+    border-style: none;
+    border-radius: 10px;
+    width: 225px;
+    font-size: larger;
+    margin-right: 25px; 
+}
+
+#botao-continuar{
+    width: 225px;    
+    border-style: none;
+    border-radius: 10px;
+    background-color: #1c59ff;
+    color: white;
+    font-size: larger;
+    cursor: pointer;
+
+}

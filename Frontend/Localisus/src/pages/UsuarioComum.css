@@ -1,191 +1,230 @@
 :root {
-    --borda-cards: 0px 2px 2px 0.5px rgb(132, 132, 132);
+  --borda-cards: 0px 2px 2px 0.5px rgb(132, 132, 132);
 }
 
 .conteudo-pagina {
-    margin-top: -4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: -4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
 .pos-cabecalho {
-    align-self: flex-start;
-    margin-left: 10rem;
-    margin-bottom: 2rem;
+  align-self: flex-start;
+  margin-left: 10rem;
+  margin-bottom: 2rem;
 }
 
 .info-container {
-    background-color: #d1e1fc;
-    flex: 1;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content:first baseline;
-    flex-direction: row;
-    min-height: 24rem;
-    min-width: 78rem;
-    transition: width 0.2s;
-    position: relative;
+  background-color: #EBF9FF;
+  flex: 1;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: first baseline;
+  flex-direction: row;
+  min-height: 24rem;
+  min-width: 78rem;
+  transition: width 0.2s;
+  position: relative;
 }
 
-.info-container:hover{
-    transform: translateX(2px);
-    transform: translateY(-6px);
-    transition: width 0.3s;
-    min-width: 72rem;
+.info-container:hover {
+  transform: translateX(2px);
+  transform: translateY(-6px);
+  transition: width 0.3s;
+  min-width: 72rem;
 }
 
-.info-container:hover img{
-    transform: translateX(2px);
-    transform: translateY(-6px);
-    transition:ease-in ;
-    display: none;
- }
+.info-container:hover img {
+  transform: translateX(2px);
+  transform: translateY(-6px);
+  transition: ease-in;
+  display: none;
+}
 
 .info-dia {
-    background-color: #d1e1fc;
-    box-shadow: 0px 0px 0.8px 0.3px rgb(132, 132, 132);;
-    height: 200px;
-    width: 260px;
-    border-radius: 5px;
-    padding: 20px;
-    margin-left: 12px;
-    margin-right: 12px;
-    transition: width 0.4s;
-    z-index: 1;
+  background-color: #b0ceff;
+  height: 200px;
+  width: 260px;
+  border-radius: 5px;
+  padding: 20px;
+  margin-left: 12px;
+  margin-right: 12px;
+  transition: width 0.4s;
+  z-index: 1;
 }
 
 .info-dia:hover {
-    background-color: #fafeff;
-     flex: 5;
-     transform: translateY(-15px); 
-     width: 360px;
+  background-color: #fafeff;
+  flex: 5;
+  transform: translateY(-15px);
+  width: 360px;
 }
 
 .info-dia h1 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
-
-
 .cards-usuario-comum-centro {
-    background-color: #ffffff;
-    box-shadow: 0px 2px 2px 0.5px rgb(132, 132, 132);
-    border-radius: 15px;
-    justify-content: center;
-    display: flex;
-    padding: 10px;
-    margin-left: 15px;
-    height: 15rem;
-    width: 280px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 2px 0.5px rgb(132, 132, 132);
+  border-radius: 15px;
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+  margin-left: 15px;
+  height: 15rem;
+  width: 280px;
 }
 
 .componentes-abaixo-pesquisa p {
-    color: #464646;
-    font-weight: 50;
+  color: #464646;
+  font-weight: 50;
 }
 
-
 .pesquisa-elementos {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    min-height: 16rem;
-    min-width: 80rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 16rem;
+  min-width: 80rem;
 }
 
 .pesquisa-elementos h2,
 .pesquisa-elementos h4 {
-    color: #00005d;
+  color: #00005d;
 }
 
 #mais-buscados {
-    margin-top: -15px;
-    font-weight: 400;
-    color: #a9a9a9;
+  margin-top: -15px;
+  font-weight: 400;
+  color: #a9a9a9;
 }
 
 #acoes-rapidas {
-    display: flex;
-    align-items: start;
-    color: #07044B;
+  display: flex;
+  align-items: start;
+  color: #07044B;
 }
 
 .pesquisa-elementos h4 {
-    font-weight: 220;
+  font-weight: 220;
 }
-
 
 .componentes-abaixo-pesquisa {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin-right: 2rem;
-    margin-top: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-right: 2rem;
+  margin-top: 10px;
 }
-
-
 
 .componentes-abaixo-pesquisa p {
-    padding: 10px;
-    font-size: 20px;
-    text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
 }
 
-#remedioimagem{
-    position: absolute;
-    width: 677px;
-    bottom: 1.5;
-    margin-left: 725px;
-    
+#remedioimagem {
+  position: absolute;
+  width: 677px;
+  bottom: 1.5;
+  margin-left: 725px;
 }
 
 .cabecalho-nav {
-    background-color: #f6fafd;
-    height: 30px;
-    position: relative;
-    display: flex;
-    float: right;
+  background-color: #f6fafd;
+  height: 30px;
+  position: relative;
+  display: flex;
+  float: right;
 }
 
 #saudacao-user {
-    font-weight: 250;
+  font-weight: 250;
 }
 
 #sugestao-user {
-    font-weight: 50;
+  font-weight: 50;
 }
 
-
 .componentes-cotidiano {
-    display: flex;
-    margin-top: 4rem;
+  display: flex;
+  margin-top: 4rem;
 }
 
 .cards-usuario-comum-cotidiano {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0px 2px 2px 0.5px rgb(132, 132, 132);
-    display: flex;
-    padding: 30px;
-    justify-content: flex-start;
-    min-height: 245px;
-    width: 1250px;
-    margin-left: 3rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 2px 2px 0.5px rgb(132, 132, 132);
+  display: flex;
+  padding: 30px;
+  justify-content: flex-start;
+  min-height: 245px;
+  width: 1250px;
+  margin-left: 3rem;
 }
 
-.robo-cali{
-    border-radius: 50px;
-    cursor: pointer;
-    position: fixed;
-    bottom: 10px;
-    right: 15px;
-    min-width: 75px;
-    min-height: 75px;
-    background-color: #a9a9a9;
-    z-index: 1;
+/* ===== Susana (assistente) ===== */
+.susane-ia {
+  position: fixed;
+  right: -60px;
+  bottom: 16px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.susane-ia img {
+  height: 200px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.susane-ia:hover img {
+  transform: translateY(-6px);
+}
+
+/* Balão de mensagem */
+.susane-balao {
+  position: absolute;
+  bottom: 90%;
+  right: 85px;
+  margin: 0 0 6px;
+  padding: 10px 16px;
+  border-radius: 100px;
+  background: #1f285d;
+  color: #ebf9ff;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(31, 40, 93, 0.35);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* setinha do balão apontando para a Susana */
+.susane-balao::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 28px;
+  border: 8px solid transparent;
+  border-top-color: #1f285d;
+}
+
+.susane-ia:hover .susane-balao,
+.susane-ia:focus-visible .susane-balao {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.susane-ia:focus-visible {
+  outline: none;
 }

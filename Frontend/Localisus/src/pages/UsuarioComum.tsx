@@ -1,18 +1,19 @@
-import { ComponenteCard } from "../components/Cards";
 import { useState } from "react";
-import { BarraPesquisa } from "../components/BarraPesquisa";
+import type { CSSProperties } from "react";
+import { ComponenteCard } from "../components/Cards/Cards";
+import { BarraPesquisa } from "../components/BarraPesquisa/BarraPesquisa";
 import { medicamentosMock } from "../mocks/medicamentosMock";
 import { estoqueMock } from "../mocks/estoqueMock";
-import "./UsuarioComum.css"
-import { Clock, Pill, CalendarCheck, Hospital, AlarmClock, Newspaper, Map, BellRing, BookOpenCheck } from "lucide-react";
+import "./UsuarioComum.css";
+import { Clock, Pill, CalendarCheck, Hospital, AlarmClock, Map, BellRing } from "lucide-react";
 import { hospitaisMock } from "../mocks/hospitaisMocks";
-import { Sidebar } from "../components/Sidebar";
-import { TopbarUsuarios } from "../components/TopbarUsuarios";
+import { Sidebar } from "../components/Sidebar/Sidebar";
+import { TopbarUsuarios } from "../components/Topbar/TopbarUsuarios";
 import { useAuth } from "../contexts/AuthContext";
-import medicamentos from "../imagens/medicamentos.png"
-import { DadosHospitalMapa, MapaLocalisus } from "../components/MapaLocalisus";
-import { FeedNoticias } from "../components/FeedNoticias";
-import remedioimagem from "../imagens/remedios1.svg"
+import { DadosHospitalMapa, MapaLocalisus } from "../components/Mapas/MapaLocalisus";
+import susane from "../imagens/susane.png";
+import { FeedNoticias } from "../components/Feed/FeedNoticias";
+import remedioimagem from "../imagens/remedios1.svg";
 
 type TipoStatusBusca = 'ocioso' | 'sucesso' | 'nao_encontrado' | 'campo_vazio';
 
@@ -25,7 +26,7 @@ export const UsuarioComum = () => {
         { titulo: "Medicamentos", descricao: "Gerencie seus medicamentos em um só lugar, acompanhe tratamentos ativos e receba lembretes personalizados.", icone: Pill, cor: "#0396ffff" },
         { titulo: "Postos/Farmácias", descricao: "Encontre unidades de saúde, farmácias e postos de atendimento próximos da sua localização de forma rápida e prática.", icone: Hospital, cor: "#ff8c00ff" }
     ]
-    
+
     const cardsInfoDia = [
         { titulo: "16:00", descricao: "Amoxicilina 250ml", icone: Clock, cor: "#fff" },
         { titulo: "UBS Central", descricao: "1,2km de distância", icone: Map, cor: "#821ff1" },
@@ -45,9 +46,10 @@ export const UsuarioComum = () => {
             m.nome.toLowerCase().includes(termoLimpo)
         )
 
-        if(medicamentos.length === 0){
+        if (medicamentosEncontrados.length === 0) {
             setHospitaisNoMapa([])
             setStatusBusca('nao_encontrado')
+            return;
         }
 
         const idsMedicamentos = medicamentosEncontrados.map(m => m.id)
@@ -65,7 +67,7 @@ export const UsuarioComum = () => {
                 let statusLogistico = 'DISPONIVEL'
                 if (itemEstoque.quantidade === 0) statusLogistico = 'INDISPONIVEL'
                 else if (itemEstoque.quantidade < 50) statusLogistico = 'CRITICO'
-    
+
                 dadosMedicamento.push({
                     hospital: hosp,
                     nomeMedicamento: med?.nome,
@@ -76,12 +78,12 @@ export const UsuarioComum = () => {
             return dadosMedicamento;
         }, [])
 
-        if (hospitaisFormatados.length === 0){
+        if (hospitaisFormatados.length === 0) {
             setStatusBusca('nao_encontrado')
         } else {
             setStatusBusca('sucesso')
         }
-        
+
         setHospitaisNoMapa(hospitaisFormatados)
     }
 
@@ -105,13 +107,11 @@ export const UsuarioComum = () => {
                                         <ComponenteCard titulo={ci.titulo} descricao={ci.descricao} icone={ci.icone} cor={ci.cor} />
                                     </article>
                                 )
-                                
                             }
-                            <img id='remedioimagem' src= {remedioimagem} />
-
+                            <img id="remedioimagem" src={remedioimagem} alt="" />
                         </div>
-                        <BarraPesquisa onSearch={executarBusca}  />
-                            
+                        <BarraPesquisa onSearch={executarBusca} />
+
                         {
                             statusBusca === 'nao_encontrado' && (
                                 <div className="mensagem-status-erro">
@@ -141,7 +141,7 @@ export const UsuarioComum = () => {
                         <div className="componentes-abaixo-pesquisa">
                             {
                                 cardsCentro.map((cc, index) =>
-                                    <article key={index} className="cards-usuario-comum-centro" style={{ "--cor-tema": cc.cor } as React.CSSProperties}>
+                                    <article key={index} className="cards-usuario-comum-centro" style={{ "--cor-tema": cc.cor } as CSSProperties}>
                                         <ComponenteCard titulo={cc.titulo} descricao={cc.descricao} icone={cc.icone} cor={cc.cor} />
                                     </article>
                                 )
@@ -150,14 +150,19 @@ export const UsuarioComum = () => {
                     </section>
                     <section className="componentes-cotidiano">
                         <article className="ultimas-noticias">
-                            <FeedNoticias></FeedNoticias>
-                        </article>
-                        <article className="robo-cali">
-                            <h3>Cali</h3>
+                            <FeedNoticias />
                         </article>
                     </section>
                 </div>
             </main>
+
+            {/* Assistente virtual fixa no canto direito */}
+            <aside className="susane-ia" tabIndex={0}>
+                <p className="susane-balao" role="tooltip">
+                    Se precisar de ajuda é só chamar!
+                </p>
+                <img src={susane} alt="Susana, assistente virtual" />
+            </aside>
         </>
     )
 }

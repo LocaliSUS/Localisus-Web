@@ -1,7 +1,10 @@
 import {  useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
+import personagemtelacadastrom from '../imagens/cadastro-personagem.svg'
 import { TipoUsuario } from '../mocks/usuarioMock'
+import "./Cadastro.css"
+import InputCpf from '../components/CPF/MascararCpf'
 
 export const Cadastro = () => {
     const [ nome, setNome] = useState('')
@@ -38,33 +41,44 @@ export const Cadastro = () => {
 
     return(
         <>
-        <h2> Cadastre-se no Localisus </h2>
-        <form onSubmit={handleCadastro}>
+        <div className="tela-cadastro">
+            <div className="elementos-cadastro-esquerda">
+          <h2> Crie sua conta</h2>
+        <h3> Junte-se a milhares de pessoas que já utilizam o Localisus para cuidar da sua saúde com mais facilidade.</h3>
+        <img src={personagemtelacadastrom}/>
+        </div>
+        <div className="card-cadastro">
+        <form id="cadastro-formulario" onSubmit={handleCadastro}>
+            <h3> Nome Completo </h3>
             <input
                 type="text"
                 value={nome}
                 placeholder='Nome'
                 onChange={(e) => setNome(e.target.value)}
                 />
+            <h3> Email </h3>
                 <input
                 type="email"
                 value={email}
                 placeholder='Email'
                 onChange={(e) => setEmail(e.target.value)}
                 />
-                <input
-                type="text"
-                value={cpf}
-                placeholder='Cpf'
-                onChange={(e) => setCpf(e.target.value)}
-                />
+            <h3> CPF </h3>
+                <InputCpf></InputCpf>
+            <h3> Senha </h3>
                 <input
                 type="password"
                 value={senha}
                 placeholder='Senha'
                 onChange={(e) => setSenha(e.target.value)}
                 />
-                <div>
+                <h3> Confirmar Senha </h3>  <input
+                type="password"
+                value={senha}
+                placeholder='Confirmar Senha'
+                onChange={(e) => setSenha(e.target.value)}
+                />
+                {/* <div>
                     <select
                         id='escolha-usuario'
                         value={tipo}
@@ -81,8 +95,19 @@ export const Cadastro = () => {
                         placeholder='Id do Hospital'
                         onChange={(e) => setHospital(Number(e.target.value))}/>
                 )}
+                </div> */}
+                <div className="botoes-cancelar-continuar">
+
+                <button id='botao-cancelar'> Cancelar </button>
+                <button id='botao-continuar'> Continuar </button>
+                
                 </div>
+                <p> Ao continuar você concorda com os <span> Termos e Condições de Uso</span> e <span> Política de Privacidade</span>
+                </p>
         </form>
-        </>
+        </div>
+ 
+        </div>
+       </>
     )
 }

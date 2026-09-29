@@ -1,7 +1,7 @@
 main{
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 85px;
 }
 
 .oq-localisus{
@@ -9,23 +9,22 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .oq-localisus h2{
-    font-size: 50px;
+    font-size: 62.5px;
     text-align: center;
     width: 950px;
 }
 
 .oq-localisus p {
     width: 650px;
-    font-size: 23px;
+    font-size: 32px;
     display: flex;
     justify-content: center;
     text-align: center;
 }
-
 
 span{
     color: #1352ff;
@@ -40,7 +39,7 @@ span{
 h4{
     display: flex;
     justify-content: center;
-    font-weight: 500;
+    font-weight: 600;
     color: #1352ff;
-    font-size: 21px;
+    font-size: 23px;
 }

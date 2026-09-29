@@ -3,12 +3,12 @@ import { medicamentosMock } from "../mocks/medicamentosMock"
 import { useAuth } from "../contexts/AuthContext"
 import { hospitaisMock } from "../mocks/hospitaisMocks"
 import { estoqueMock } from "../mocks/estoqueMock"
-import { TopbarUsuarios } from "../components/TopbarUsuarios"
+import { TopbarUsuarios } from "../components/Topbar/TopbarUsuarios"
 import "./Funcionario.css"
 import { IceCream, LucideHospital, LucidePanelTopClose, PillIcon, UsersIcon } from "lucide-react"
-import { ComponenteCard } from "../components/Cards"
+import { ComponenteCard } from "../components/Cards/Cards"
 import { usuarioMock } from "../mocks/usuarioMock"
-import { DashboardFuncionario } from "../components/DashboardFuncionario"
+import { DashboardFuncionario } from "../components/Dashboard/DashboardFuncionario"
 
 
 export const Funcionario = () => {

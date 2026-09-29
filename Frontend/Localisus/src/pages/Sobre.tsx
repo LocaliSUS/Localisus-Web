@@ -1,18 +1,13 @@
-import { CardImagem } from "../components/CardImagem";
-import { Navbar } from "../components/Navbar";
-import { ListaImagens } from "../imagens/ListaImagens";
+import { CardImagem } from "../components/Cards/CardImagem";
+import { Navbar } from "../components/Navbar/Navbar";
 import "./Sobre.css"
-import { useState } from 'react';
-
 export const Sobre = () => {
-    const [index, setIndex] = useState(0);
 
-    let foto = ListaImagens[index];
     return (
         <>
 
             <header>
-                {/* <Navbar /> */}
+                <Navbar /> 
             </header>
             <main>
                 <section className="oq-localisus">

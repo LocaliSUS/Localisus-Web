@@ -10,7 +10,7 @@ import { TipoUsuario } from './mocks/usuarioMock'
 import { Contato } from './pages/Contato'
 import { Sobre } from './pages/Sobre'
 import { UsuarioComum } from './pages/UsuarioComum'
-import  Navbar  from './components/Navbar'
+import  Navbar  from './components/Navbar/Navbar'
 import { Lembretes } from './pages/Lembretes'
 
 

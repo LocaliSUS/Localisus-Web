@@ -1,4 +1,4 @@
-import { DashboardAdmin } from "../components/DashboardAdmin";
+import { DashboardAdmin } from "../components/Dashboard/DashboardAdmin";
 import { useAuth } from "../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 
