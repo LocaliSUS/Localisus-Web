@@ -1,4 +1,8 @@
-# 📍 LocaliSUS - Projeto Integrador (Senac)
+# LocaliSUS - Projeto Integrador (Senac)
+
+---
+
+<img src="./Frontend/Localisus/src/assets/readmeWeb.png" alt="Home screen of the application" width="1920" />
 
 Este é o **Projeto Integrador** desenvolvido para o curso de Tecnologia no **Senac**. A aplicação consiste em uma plataforma de geolocalização que integra os dados oficiais do **LocaliSUS** com a **Google Maps API**, permitindo a busca e visualização de unidades de saúde e serviços do SUS de forma eficiente.
 
@@ -6,7 +10,7 @@ Além da versão web, o projeto conta com um **aplicativo mobile multiplataforma
 
 ---
 
-## 🎯 A Solução
+## A Solução
 
 Durante o desenvolvimento, identificamos que o acesso aos dados de saúde pública muitas vezes é fragmentado ou de difícil compreensão para o cidadão comum. O **LocaliSUS App** entrega as seguintes soluções:
 
@@ -22,7 +26,7 @@ Durante o desenvolvimento, identificamos que o acesso aos dados de saúde públi
 
 ---
 
-## 🛠️ Stack Tecnológica
+## Stack Tecnológica
 
 ### **Frontend Web**
 
@@ -33,16 +37,6 @@ Durante o desenvolvimento, identificamos que o acesso aos dados de saúde públi
 * **Google Maps API:** Integração para renderização de mapas, geocodificação e plotagem de marcadores.
 
 * **CSS Modules:** Estilização modular e customizada.
-
-### **Frontend Mobile**
-
-* **React Native:** Desenvolvimento de aplicativo nativo multiplataforma.
-
-* **TypeScript:** Compartilhamento de tipagem e maior segurança durante o desenvolvimento.
-
-* **Google Maps API:** Exibição de mapas e localização das unidades de saúde diretamente no aplicativo.
-
-* **Android e iOS:** Uma única base de código para ambas as plataformas.
 
 ### **Backend (Microsserviços e API)**
 
@@ -58,7 +52,7 @@ Durante o desenvolvimento, identificamos que o acesso aos dados de saúde públi
 
 ---
 
-## 📂 Fluxo de Funcionamento
+## Fluxo de Funcionamento
 
 1. **Integração Governamental:** O sistema consome os serviços de dados georreferenciados do LocaliSUS.
 
@@ -72,7 +66,7 @@ Durante o desenvolvimento, identificamos que o acesso aos dados de saúde públi
 
 ---
 
-## 🚀 Como Executar o Projeto
+## Instruções Para Execução
 
 ### Backend
 
