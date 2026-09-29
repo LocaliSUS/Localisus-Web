@@ -1,6 +1,4 @@
-# LocaliSUS - Projeto Integrador (Senac)
-
----
+# LocaliSUS Web - Projeto Integrador (Senac)
 
 <img src="./Frontend/Localisus/src/assets/readmeWeb.png" alt="Home screen of the application" width="1920" />
 
